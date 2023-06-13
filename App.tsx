@@ -135,21 +135,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'flex-start',
     paddingHorizontal: 16,
-    
     height: 20,
-    marginHorizontal:35
+    marginHorizontal:226,
+    marginRight:6
   },
   pts:{
     width: 30,
-    fontSize: 5,
+    fontSize: 10,
   },
   gl:{
     width: 30,
-    fontSize: 5, 
+    fontSize: 10, 
   },
   SG:{
     width: 30,
-    fontSize: 5, 
+    fontSize: 10, 
   }
 
 
