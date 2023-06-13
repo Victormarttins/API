@@ -4,4 +4,7 @@ export default class TeamEntity{
     team_shield_url:string;
     team_name:string;
     team_points:number;
+    team_gols_pro:number;
+    team_saldo_gols:number;
+ 
 }
