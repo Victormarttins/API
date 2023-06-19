@@ -45,6 +45,7 @@ export default function App() {
 
             placar_mandante: game['placar_mandante'],
             placar_visitante: game['placar_visitante'],
+            campeonato_nome: ''
           };
           
 
@@ -56,18 +57,40 @@ export default function App() {
       .catch(error => console.log('error', error));
   }, []);
 
-  const renderGame = ({ item }: { item: GameEntity }) => (
+  const renderGame = ({ item }: { item: GameEntity }) => ( 
+ 
+    
+
+      
     <View style={styles.cardGame}>
-      <View>
-        <Image style={styles.img} source={{ uri: item.time_mandante.escudo }} />
+    
+        
+ 
+    
+        <View>
+      
+          <Image style={styles.img} source={{ uri: item.time_mandante.escudo }} />
+          <Text>{item.time_mandante.nome_popular}</Text>
+        </View>
+       
+        <View>
+          <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginHorizontal: 90 }}>
+            <Text style={{ alignItems: 'center', fontSize: 20 }}>{item.placar_mandante}
+            </Text>
+            <Text style={{ padding: 30, fontSize: 20 }}>:</Text>
+            <Text style={{ alignItems: 'center', marginHorizontal: 3, fontSize: 20 }}> {item.placar_visitante}</Text>
+
+          </View>
+
+        </View>
+
+
+        <View>
+          <Image style={styles.img} source={{ uri: item.time_visitante.escudo }} />
+          <Text>{item.time_visitante.nome_popular}</Text>
+        </View>
       </View>
-      <View>
-        <Text style={styles.resultado}>{item.placar}</Text>
-      </View>
-      <View>
-        <Image style={styles.img} source={{ uri: item.time_visitante.escudo }} />
-      </View>
-    </View>
+      
   );
 
   return (
@@ -86,18 +109,23 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'green',
+    backgroundColor: 'rgb(61,65,90)',
     alignItems: 'center',
-    maxWidth: '100%',
+    borderRadius:25,
 
 
   },
 
   titleChamp: {
     color: 'white',
-    marginTop: 15,
+    flexDirection: 'row',
+    marginTop: 30,
     fontSize: 25,
-    fontWeight: '700'
+    fontWeight: '900',
+    justifyContent: 'space-between',
+    marginHorizontal:200
+
+    
 
   },
 
@@ -105,7 +133,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 15,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     padding: 15,
     marginTop: 30,
@@ -114,11 +142,7 @@ const styles = StyleSheet.create({
 
   },
 
-  resultado: {
-    fontWeight: 'bold',
-    padding:9
-    
-  },
+  
   img:{
      width: 50, 
      height: 50 

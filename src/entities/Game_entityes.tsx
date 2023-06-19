@@ -1,5 +1,6 @@
 export default class GameEntity{
     partida_id: number;
+    campeonato_nome:string;
     placar: string;
     time_mandante:{
         time_id:number;
@@ -15,5 +16,5 @@ export default class GameEntity{
     };
     placar_mandante: number;
     placar_visitante: number;
-
+ 
 }

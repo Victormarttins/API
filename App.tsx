@@ -1,9 +1,9 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from '@react-navigation/native';
 import React from "react";
-import HomePage from "./src/pages/HomePages";
+
 import { Button } from "react-native";
-import DetailsPage from "./src/pages/DetailPage/DetailsPages";
+
 import Table from "./src/pages/Table";
 
 export default function App() {
