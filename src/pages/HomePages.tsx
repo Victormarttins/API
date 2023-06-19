@@ -12,7 +12,7 @@ export default function HomePage({ navigation }) {
 
   useEffect(() => {
     var myHeaders = new Headers();
-    myHeaders.append("Authorization", "Bearer test_b7555f93259e437fd7031592dce53a");
+    myHeaders.append("Authorization", "Bearer live_704837c439ac3bf2a3cbac6b5076c5");
 
     var requestOptions = {
       method: 'GET',
@@ -21,7 +21,7 @@ export default function HomePage({ navigation }) {
 
     let teamsPosition: TeamEntity[] = [];
 
-    fetch("https://api.api-futebol.com.br/v1/campeonatos/10/tabela", requestOptions)
+    fetch("https://api.api-futebol.com.br/v1/campeonatos/{campeonato_id}/rodadas", requestOptions)
       .then(response => response.text())
       .then(result => JSON.parse(result))
       .then(dataJson => {
@@ -47,7 +47,7 @@ export default function HomePage({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tabela Brasileirão série B</Text>
+      <Text style={styles.title}>Tabela Brasileirão série A</Text>
       <View style={styles.table}>
 
        

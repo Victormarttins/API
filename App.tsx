@@ -4,6 +4,7 @@ import React from "react";
 import HomePage from "./src/pages/HomePages";
 import { Button } from "react-native";
 import DetailsPage from "./src/pages/DetailPage/DetailsPages";
+import Table from "./src/pages/Table";
 
 export default function App() {
 
@@ -17,8 +18,8 @@ export default function App() {
 
     <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Home" component={HomePage} />
-                <Stack.Screen name="DetailsPage" component={DetailsPage} />
+               
+                <Stack.Screen name="Table" component={Table} />
             </Stack.Navigator>
         </NavigationContainer>
         
